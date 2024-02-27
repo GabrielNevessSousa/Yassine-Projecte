@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="validacion.js" defer></script>
     <title>Unity Desk</title>
   
 </head>
@@ -19,15 +20,15 @@
 </header>
 
 <section class="sect-pago">
-    <form class="form-pago">
-        <label for="numeroTarjeta">Número de Tarjeta:</label>
-        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+    <form class="form-pago" onsubmit="return validarPago()">
+        <label for="numeroTarjeta" >Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" maxlength="16" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
 
         <label for="fechaCaducidad">Fecha de Caducidad:</label>
         <input type="date" id="fechaCaducidad" name="fechaCaducidad"  required>
 
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv"required>
+        <label for="cvv" >CVV:</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3"required>
 
         <button type="submit">Pagar</button>
     </form>
