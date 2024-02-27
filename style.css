@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*PANTALLA PRINCIPAL*/
+header, footer {
+    background-color: #4D5EA9;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    margin-right: 10px;
+    margin: 0 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 0px;
+    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #fff;
+    color: #4D5EA9;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.botones-menu {
+    margin-right: 40px;
+}
+
+.botones-menu button {
+    margin: 10px;
+    width: 140px;
+    height: 50px;
+}
+
+.slider-container {
+    min-height: 72vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    align-items: center;
+    display: flex;
+    transition: transform 0.5s ease;
+    margin-left: 10px;
+    min-height: 70vh;
+}
+
+.slide {
+    min-width: 33.33%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.5s ease;;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(87, 87, 87, 0.5);
+    color: white;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider img {
+    height: 400px;
+}
+
+.slide-content {
+    text-align: center;
+    margin: 5px;
+}
+
+.slide-content p {
+    margin: 5px 0;
+}
+
+/*PANTALLA USUARIO*/
+
+.container-usuario {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    height: 578px;
+    margin-top: 107px;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.imagenes .camara {
+    width: 65px;
+    height: 50px;
+    margin-top: 70px;
+}
+
+.foto-perfil {
+    background-color: rgb(212, 212, 212);
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.foto-perfil img {
+    margin: 20px;
+    width: 100px;
+    height: 120px;
+}
+
+.info-usuario {
+    margin: 30px;
+}
+
+.info-usuario button {
+    background-color: rgb(212, 212, 212);
+    padding: 10px;
+    border-width: 0;
+}
+
+.info-usuario input {
+    background-color: rgb(212, 212, 212);
+    padding: 10px;
+    border-width: 0;
+    margin-left: 10px;
+}
