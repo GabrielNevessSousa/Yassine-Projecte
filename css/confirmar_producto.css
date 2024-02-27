@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #4D5EA9;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    margin-right: 10px;
+    margin: 0 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 0px;
+    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #fff;
+    color: #4D5EA9;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.botones-menu {
+    margin-right: 40px;
+}
+
+.botones-menu button {
+    margin: 10px;
+    width: 140px;
+    height: 50px;
+}
+
+section.sect-conf {
+    min-height: 78vh;
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conf {
+    width: 300px;
+    padding: 20px;
+    
+    flex-direction: column;
+}
+
+.conf label {
+    margin-bottom: 8px;
+}
+
+.conf-1 input {
+    width: calc(70%);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dcdbdb;
+}
+
+.conf-2 input {
+    width: calc(66.5%);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dcdbdb;
+}
+
+.conf-3 input {
+    width: calc(73.6%);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dcdbdb;
+}
+
+.conf-4 input {
+    width: calc(60.4%);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dcdbdb;
+}
+
+.conf-5 input {
+    width: calc(63%);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dcdbdb;
+}
+
+.image-column {
+    width: 100px;
+    display: flex;
+    padding-bottom: -1em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.image-size {
+    height: 232px;
+    width: 330px;
+    margin-top: 1.2em;
+    border: none;
+    border-radius: 4px;
+  
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-confirmar {
+    background-color: #4D5EA9;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-confirmar, p {
+    color: #ffffff;
+
+}
+
+footer {
+    justify-content: center;
+    margin-top: 0px;
+}
+

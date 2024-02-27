@@ -1,10 +1,12 @@
+/*PANTALLA PRINCIPAL*/
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/*PANTALLA PRINCIPAL*/
+/*HEADER*/
 header, footer {
     background-color: #4D5EA9;
     color: #fff;
@@ -79,9 +81,10 @@ footer {
     width: 140px;
     height: 50px;
 }
+ /*FINAL HEADER*/
 
 .slider-container {
-    min-height: 72vh;
+    min-height: 71vh;
     overflow: hidden;
     width: 100%;
 }
@@ -136,59 +139,4 @@ img {
 
 .slide-content p {
     margin: 5px 0;
-}
-
-/*PANTALLA USUARIO*/
-
-.container-usuario {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    height: 578px;
-    margin-top: 107px;
-}
-
-.imagenes {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-.imagenes .camara {
-    width: 65px;
-    height: 50px;
-    margin-top: 70px;
-}
-
-.foto-perfil {
-    background-color: rgb(212, 212, 212);
-    border-radius: 100px;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    margin: 20px;
-    margin-left: 30px;
-}
-
-.foto-perfil img {
-    margin: 20px;
-    width: 100px;
-    height: 120px;
-}
-
-.info-usuario {
-    margin: 30px;
-}
-
-.info-usuario button {
-    background-color: rgb(212, 212, 212);
-    padding: 10px;
-    border-width: 0;
-}
-
-.info-usuario input {
-    background-color: rgb(212, 212, 212);
-    padding: 10px;
-    border-width: 0;
-    margin-left: 10px;
 }
