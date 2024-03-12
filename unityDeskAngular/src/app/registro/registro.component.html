@@ -1,0 +1,35 @@
+<body>
+    <div class="formulario">
+        <h1>Registro</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="username">
+                <input type="text" formControlName="nom" name="nom" />
+                <label>Nombre</label>
+            </div>
+
+            <div class="username">
+                <input type="text" formControlName="cognom" name="cognom" />
+                <label>Apellidos</label>
+            </div>
+
+            <div class="username">
+                <input type="text" formControlName="email" name="email" />
+                <label>Email</label>
+            </div>
+
+            <div class="username">
+                <input type="password" formControlName="password" name="password"/>
+                <label>Contraseña</label>
+            </div>
+
+            <div class="username">
+                <input type="password" formControlName="reppassword" name="reppassword"/>
+                <label>Repetir contraseña</label>
+            </div>
+            <input type="submit" value="Registrarse">
+            <div class="registrarse">
+                Ya tengo cuenta, quiero <a routerLink="/login"  routerLinkActive="active">iniciar sesión</a>
+            </div>
+        </form>
+    </div>
+</body>

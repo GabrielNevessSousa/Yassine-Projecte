@@ -1,0 +1,32 @@
+<body>
+    <header>
+        <a routerLink="/pantalla-principal"><img src="assets/logo-color.png" alt="Logo"></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <div class="botones-menu">
+            <a routerLink="/pantalla-reservas"><button class="button">Mis reservas</button></a>
+            <a routerLink="/pantalla-usuari"><button class="button">Usuario</button></a>
+        </div>
+    </header>
+
+<section class="sect-pago">
+    <form class="form-pago" onsubmit="return validarPago()">
+        <label for="numeroTarjeta" >Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" maxlength="16" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
+
+        <label for="fechaCaducidad">Fecha de Caducidad:</label>
+        <input type="date" id="fechaCaducidad" name="fechaCaducidad"  required>
+
+        <label for="cvv" >CVV:</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3"required>
+
+        <button class="btn-pagar" type="submit">Pagar</button>
+    </form>
+</section>
+
+<footer>
+    <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
+</footer>
+</body>

@@ -1,0 +1,21 @@
+<body>
+    <div class="formulario">
+        <h1>Inicio de sesión</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="username">
+                <input type="email" formControlName="email" name="email"/>
+                <label>Email</label>
+            </div>
+
+            <div class="username">
+                <input type="password" formControlName="password" name="password"/>
+                <label>Contraseña</label>
+            </div>
+            <button type="submit" [disabled]="!loginForm.valid" class="btn">Iniciar sesión</button>
+            <!--<input type="submit" value="iniciar sesión">-->
+            <div class="registrarse">
+                No tengo cuenta, quiero <a routerLink="/registro"  routerLinkActive="active">registrarme</a>
+            </div>
+        </form>
+    </div>    
+</body>
