@@ -8,6 +8,8 @@ import { PantallaPagoComponent } from './pantalla-pago/pantalla-pago.component';
 import { PantallaProductoComponent } from './pantalla-producto/pantalla-producto.component';
 import { PantallaReservasComponent } from './pantalla-reservas/pantalla-reservas.component';
 import { PantallaUsuariComponent } from './pantalla-usuari/pantalla-usuari.component';
+import { PantallaProductoLleidaComponent } from './pantalla-producto-lleida/pantalla-producto-lleida.component';
+import { PantallaProductoMadridComponent } from './pantalla-producto-madrid/pantalla-producto-madrid.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
   { 
     path: 'pantalla-producto', 
     component: PantallaProductoComponent 
+  },
+  { 
+    path: 'pantalla-producto-madrid', 
+    component: PantallaProductoMadridComponent 
+  },
+  { 
+    path: 'pantalla-producto-lleida', 
+    component: PantallaProductoLleidaComponent 
   },
   { 
     path: 'pantalla-reservas', 

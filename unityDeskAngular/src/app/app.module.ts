@@ -13,6 +13,8 @@ import { PantallaUsuariComponent } from './pantalla-usuari/pantalla-usuari.compo
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { PantallaProductoMadridComponent } from './pantalla-producto-madrid/pantalla-producto-madrid.component';
+import { PantallaProductoLleidaComponent } from './pantalla-producto-lleida/pantalla-producto-lleida.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RouterModule } from '@angular/router';
     PantallaReservasComponent,
     ConfirmarProductoComponent,
     PantallaPagoComponent,
-    PantallaUsuariComponent
+    PantallaUsuariComponent,
+    PantallaProductoMadridComponent,
+    PantallaProductoLleidaComponent
   ],
   imports: [
     BrowserModule,
