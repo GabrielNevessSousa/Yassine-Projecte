@@ -10,7 +10,7 @@
 <body>
     <div class="formulario">
         <h1>Registro</h1>
-        <form method="post">
+        <form method="post" onsubmit="return validarFormulario()">
             <div class="username">
                 <input type="text" name="nombre" required>
                 <label>Nombre</label>
@@ -41,6 +41,20 @@
             </div>
         </form>
     </div>
-    
+
+    <script>
+        function validarFormulario() {
+            
+            const nombre = document.querySelector('input[name="nombre"]').value;
+            const apellidos = document.querySelector('input[name="apellidos"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const contrasena = document.querySelector('input[name="contrasena"]').value;
+
+            if (nombre && apellidos && email && contrasena) {
+                alert("¡Registro exitoso! Gracias por unirte.");
+                return true; 
+            }
+        }
+    </script>
 </body>
 </html>

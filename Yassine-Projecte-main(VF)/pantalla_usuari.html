@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +11,8 @@
     <header>
         <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
         <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Buscar...">
-            <button class="search-button">Buscar</button>
+            <input type="text" class="search-input" placeholder="Buscar..." id="searchInput">
+            <button class="search-button" onclick="habilitarCampos()">Buscar</button>
         </div>
         <div class="botones-menu">
             <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
@@ -29,21 +31,38 @@
                 </div>
             </div>
             <div class="info-usuario">
-                <a><button><img src="assets/editar.png" width="15px"></button></a>
-                <input type="text" class="usuario" placeholder="Nombre usuario">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="text" class="usuario" placeholder="Nombre usuario" id="nombreUsuario" disabled>
             </div>
             <div class="info-usuario">
-                <a><button><img src="assets/editar.png" width="15px"></button></a>
-                <input type="password" class="usuario" placeholder="Contraseña">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="password" class="usuario" placeholder="Contraseña" id="contrasena" disabled>
             </div>
             <div class="info-usuario">
-                <a><button><img src="assets/editar.png" width="15px"></button></a>
-                <input type="text" class="usuario" placeholder="Correo electrónico">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="text" class="usuario" placeholder="Correo electrónico" id="correo" disabled>
             </div>
         </div>
     </main>
-   
-    <footer>
-        <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
-    </footer>
+
+    <script>
+        function habilitarCampos() {
+            const nombreUsuario = document.getElementById('nombreUsuario');
+            const contrasena = document.getElementById('contrasena');
+            const correo = document.getElementById('correo');
+
+            if (nombreUsuario.disabled) {
+                nombreUsuario.disabled = false;
+                contrasena.disabled = false;
+                correo.disabled = false;
+            } else {
+                // Aquí puedes guardar los datos en algún lugar si lo deseas
+                alert("Datos guardados correctamente.");
+                nombreUsuario.disabled = true;
+                contrasena.disabled = true;
+                correo.disabled = true;
+            }
+        }
+    </script>
 </body>
+</html>
