@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/confirmar_producto.css">
-   
     <title>Unity Desk</title>
-
 </head>
-
 <body>
 
-    <header>
-        <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
-        <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Buscar...">
-            <button class="search-button">Buscar</button>
-        </div>
-        <div class="botones-menu">
-            <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
-            <a href="pantalla_usuari.html"><button class="button">Usuario</button></a>
-        </div>
-    </header>
+<header>
+    <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Buscar...">
+        <button class="search-button">Buscar</button>
+    </div>
+    <div class="botones-menu">
+        <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
+        <a href="pantalla_usuari.html"><button class="button">Usuario</button></a>
+    </div>
+</header>
 
-    <section class="sect-conf">
-        <div class="container">
-            <div class="conf">
-
-
-                <div class="conf-1">
-                    <label for="Nombre" style="font-weight: bold;">Nombre:</label>
-                    <!--<span style="color: black;">Oficina simple con luz natural</span>-->
-                    <input type="text" id="Nombre" name="Nombre" value="Oficina simple con luz natural" readonly>
-                </div>
-
-                <div class="conf-2">
-                    <label for="Direccion">Direccion:</label>
-                    <input type="text" id="Direccion" name="Direccion" value="Calle del Caballero de Gracia" readonly>
-                </div>
-
-                <div class="conf-3">
-
-                    <label for="Precio">Precio:</label>
-                    <input type="text" id="Precio" name="Precio" value="250€" readonly>
-
-                </div>
-
-
-                <div class="conf-4">
-                    <label for="Fecha inicio">Fecha inicio:</label>
-                    <input type="date" id="Fecha inicio" name="Fecha inicio" readonly>
-                </div>
-
-                <div class="conf-5">
-                    <label for="Fecha final">Fecha final:</label>
-                    <input type="date" id="Fecha final" name="Fecha final" readonly>
-
-                </div>
+<section class="sect-conf">
+    <div class="container">
+        <div class="conf">
+            <div class="conf-1">
+                <label for="Nombre" style="font-weight: bold;">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" readonly>
             </div>
-
-            <div class="">
-                <img src="assets/oficina.png" alt="Descripción de la imagen" class="image-size">
+            <div class="conf-2">
+                <label for="Direccion" style="font-weight: bold;">Direccion:</label>
+                <input type="text" id="Direccion" name="Direccion" readonly>
+            </div>
+            <div class="conf-3">
+                <label for="Precio" style="font-weight: bold;">Precio:</label>
+                <input type="text" id="Precio" name="Precio" readonly>
+            </div>
+            <div class="conf-4">
+                <label for="FechaInicio" style="font-weight: bold;">Fecha inicio:</label>
+                <input type="date" id="FechaInicio" name="FechaInicio" readonly>
+            </div>
+            <div class="conf-5">
+                <label for="FechaFin" style="font-weight: bold;">Fecha final:</label>
+                <input type="date" id="FechaFin" name="FechaFin" readonly>
             </div>
         </div>
-
         <div>
-            <a href="paginaPago.html"><button class="button-confirmar">ALQUILAR</button></a>
-
+            <img src="assets/oficina.png" alt="Descripción de la imagen" class="image-size">
         </div>
-    </section>
+    </div>
+    <div>
+        <a href="paginaPago.html"><button class="button-confirmar">ALQUILAR</button></a>
+    </div>
+</section>
 
+<footer>
+    <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
+</footer>
 
-    <footer>
-        <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
-    </footer>
+<script>
+    // Función para obtener los parámetros de la URL
+    function obtenerParametrosURL() {
+        var parametros = {};
+        var url = window.location.search.substring(1).split('&');
+        for (var i = 0; i < url.length; i++) {
+            var parametro = url[i].split('=');
+            parametros[parametro[0]] = decodeURIComponent(parametro[1]);
+        }
+        return parametros;
+    }
+
+    // Función para llenar los campos con los valores de los parámetros de la URL
+    function llenarCampos() {
+        var parametros = obtenerParametrosURL();
+        document.getElementById('Nombre').value = parametros['nombre'];
+        document.getElementById('Direccion').value = parametros['direccion'];
+        document.getElementById('Precio').value = parametros['precio'];
+        document.getElementById('FechaInicio').value = parametros['fechaInicio'];
+        document.getElementById('FechaFin').value = parametros['fechaFin'];
+    }
+
+    // Llamar a la función para llenar los campos al cargar la página
+    llenarCampos();
+</script>
 
 </body>
-
 </html>

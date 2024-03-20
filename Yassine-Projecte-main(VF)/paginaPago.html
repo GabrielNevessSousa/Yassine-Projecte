@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/pagina_pago.css">
     <script src="validacion.js" defer></script>
     <title>Unity Desk</title>
-  
 </head>
 <body>
     <header>
@@ -21,24 +20,46 @@
         </div>
     </header>
 
-<section class="sect-pago">
-    <form class="form-pago" onsubmit="return validarPago()">
-        <label for="numeroTarjeta" >Número de Tarjeta:</label>
-        <input type="text" id="numeroTarjeta" name="numeroTarjeta" maxlength="16" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
+    <section class="sect-pago">
+        <form class="form-pago">
+            <label for="numeroTarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numeroTarjeta" name="numeroTarjeta" maxlength="19" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
 
-        <label for="fechaCaducidad">Fecha de Caducidad:</label>
-        <input type="date" id="fechaCaducidad" name="fechaCaducidad"  required>
+            <label for="fechaCaducidad">Fecha de Caducidad:</label>
+            <input type="date" id="fechaCaducidad" name="fechaCaducidad"  required>
 
-        <label for="cvv" >CVV:</label>
-        <input type="text" id="cvv" name="cvv" maxlength="3"required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
 
-        <button type="submit">Pagar</button>
-    </form>
-</section>
+            <button type="submit">Pagar</button>
+        </form>
+    </section>
 
-<footer>
-    <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
-</footer>
+    <footer>
+        <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
+    </footer>
 
+    <script>
+        // Función para mostrar el mensaje emergente al realizar el pago
+        function mostrarMensaje() {
+            const fechaCaducidad = new Date(document.getElementById("fechaCaducidad").value);
+            const fechaActual = new Date();
+
+            if (fechaCaducidad < fechaActual) {
+                alert("La fecha de caducidad no puede ser anterior a la fecha actual.");
+            } else {
+                alert("¡Pago realizado con éxito!");
+                window.location.href = "pantalla_principal.html"; // Cambia "otra_pagina.html" por la URL de la página a la que deseas redirigir
+            }
+        }
+
+        // Función para manejar el evento de envío del formulario
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evitar el envío del formulario
+                mostrarMensaje(); // Mostrar el mensaje de pago realizado o de error
+            });
+        });
+    </script>
 </body>
 </html>

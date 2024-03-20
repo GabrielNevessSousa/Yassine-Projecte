@@ -27,16 +27,16 @@
             <img src="assets/oficina2.png" alt="Imagen">
             <div>
                 <div class="text-box">
-                    <p>Oficina simple con luz natural</p>
+                    <p>Oficina para tres trabajadores en el centro de Lleida</p>
                 </div>
                 <div class="text-box">
-                    <p>250€</p>
+                    <p>175€</p>
                 </div>
                 <div class="text-box">
-                    <p>Oficina en el pleno centro de Madrid situada en el barrio de Sol, espacio de 15m^2, equipada con mesa, silla, lámpara y algunos armarios para guardar todos tus materiales.</p>
+                    <p>Oficina en el centro de Lleida situada cerca de Ricard Vinyes,espacio 17m^2, equipada con tres sillas, tres pantallas para conectar portatiles y varios armarios para guardar todo el material</p>
                 </div>
                 <div class="fecha-container">
-                    <button class="extra-button" onclick="mostrarCampoFecha()">ELEGIR FECHA</button>
+                    <button class="extra-button" onclick="mostrarCampoFecha()">EDITAR FECHA</button>
                     <div id="campo-fecha" style="display: none;">
                         <div>
                             <label for="fecha-inicio">Fecha de Inicio:</label>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <a onclick="enviarDatosReserva()"><button id="boton-reservar" class="second-extra-button" style="display: none;">RESERVAR</button></a>
+        <a href="javascript:void(0);" onclick="enviarDatosReserva()"><button id="boton-reservar" class="second-extra-button" style="display: none;">RESERVAR</button></a>
     </div>
     
 </main>
@@ -85,9 +85,9 @@
     }
 
     function enviarDatosReserva() {
-        var nombre = "Oficina simple con luz natural";
-        var direccion = "Calle del Caballero de Gracia";
-        var precio = "250€";
+        var nombre = "Oficina para tres trabajadores en el centro de Lleida";
+        var direccion = "Centro de Lleida cerca de Ricard Vinyes";
+        var precio = "175€";
         var fechaInicio = document.getElementById('fecha-inicio').value;
         var fechaFin = document.getElementById('fecha-fin').value;
 
