@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Desk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday@1.8.0/css/pikaday.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Pantalla_Producto.css">
+</head>
+<body>
+
+<header>
+    <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Buscar...">
+        <button class="search-button">Buscar</button>
+    </div>
+    <div class="botones-menu">
+        <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
+        <a href="pantalla_usuari.html"><button class="button">Usuario</button></a>
+    </div>
+</header>
+
+<main>
+    <div class="content">
+        <div class="image-container">
+            <img src="assets/oficina2.png" alt="Imagen">
+            <div>
+                <div class="text-box">
+                    <p>Oficina simple con luz natural</p>
+                </div>
+                <div class="text-box">
+                    <p>250€</p>
+                </div>
+                <div class="text-box">
+                    <p>Oficina en el pleno centro de Madrid situada en el barrio de Sol, espacio de 15m^2, equipada con mesa, silla, lámpara y algunos armarios para guardar todos tus materiales.</p>
+                </div>
+                <div class="fecha-container">
+                    <button class="extra-button" onclick="mostrarCampoFecha()">ELEGIR FECHA</button>
+                    <div id="campo-fecha" style="display: none;">
+                        <div>
+                            <label for="fecha-inicio">Fecha de Inicio:</label>
+                            <input type="date" id="fecha-inicio" name="fecha-inicio">
+                        </div>
+                        <div>
+                            <label for="fecha-fin">Fecha de Final:</label>
+                            <input type="date" id="fecha-fin" name="fecha-fin" onchange="validarFechas()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="confirmarProducto.html"><button id="boton-reservar" class="second-extra-button" style="display: none;">RESERVAR</button></a>
+    </div>
+    
+</main>
+
+<footer>
+    <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
+</footer>
+<script>
+    function mostrarCampoFecha() {
+        document.getElementById('campo-fecha').style.display = 'flex';
+    }
+
+    function mostrarBotonReservar() {
+        document.getElementById('boton-reservar').style.display = 'block';
+    }
+
+    function validarFechas() {
+        var fechaInicio = document.getElementById('fecha-inicio').value;
+        var fechaFin = document.getElementById('fecha-fin').value;
+
+        if (fechaInicio > fechaFin) {
+            alert('La fecha de final no puede ser anterior a la fecha de inicio.');
+            document.getElementById('fecha-fin').value = fechaInicio;
+        }else{
+            mostrarBotonReservar();
+        }
+    }
+</script>
+</body>
+</html>

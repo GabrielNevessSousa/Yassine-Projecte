@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #4D5EA9;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    margin-right: 10px;
+    margin: 0 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 0px;
+    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #fff;
+    color: #4D5EA9;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.botones-menu {
+    margin-right: 40px;
+}
+
+.botones-menu button {
+    margin: 10px;
+    width: 140px;
+    height: 50px;
+}
+.text-box {
+    border: 1px solid black;
+    background-color: lightgrey;
+    color:black;
+    padding: 10px;
+    margin-bottom: 5px; 
+    width: 80%; 
+}
+
+.image-container {
+    display: flex;
+    margin-bottom: 20px; 
+}
+
+.image-container img {
+    width: 600px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.extra-button {
+    background-color: #4D5EA9;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.extra-button:focus {
+    outline: none;
+}
+
+.second-extra-button {
+    background-color: #4D5EA9;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 1200px;
+}
+
+.second-extra-button:focus {
+    outline: none;
+}
+
+.content {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin-left: 100px;
+    min-height: 59vh;
+}
+/*Campo tipo fecha*/
+input[type="date"] {
+    width: 45%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+#campo-fecha {
+    margin-left: 10px;
+}
+#campo-fecha div {
+    margin-right: 10px;
+}
+
+#campo-fecha label {
+    white-space: nowrap; /* Evitar el salto de línea en las etiquetas */
+}
+label {
+    font-weight: bold;
+}
+.fecha-container {
+    display: flex;
+    align-items: center;
+}
