@@ -1,21 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="pantalla-principal-Style.css" type="text/css">
+    <title>Unity Desk</title>
+    <link rel="stylesheet" href="css/pantalla_principal.css">
 </head>
-
 <body>
+
 <header>
-    <a href="pantalla-principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
+    <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
     <div class="search-bar">
         <input type="text" class="search-input" placeholder="Buscar...">
         <button class="search-button">Buscar</button>
     </div>
     <div class="botones-menu">
-        <a href="pantalla-reservas.html"><button class="button">Mis reservas</button></a>
-        <a href="pantalla-usuari.html"><button class="button">Usuario</button></a>
+        <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
+        <a href="pantalla_usuari.html"><button class="button">Usuario</button></a>
     </div>
 </header>
 
@@ -24,12 +25,12 @@
         <div class="slider">
             <div class="slide">
                 <div class="slide-content">
-                    <a routerLink="/pantalla-producto"><img src="assets/oficina1.png" alt="Imagen 1"></a>
+                    <img src="assets/oficina1.png" alt="Imagen 1">
                     <p>Oficina 1</p>
-                    <p>Precio: 175€</p>
+                    <p>Precio: 100€</p>
                 </div>
                 <div class="slide-content">
-                    <a href="pantalla-producto.html"><img src="assets/oficina2.png" alt="Imagen 2"></a>
+                    <a href="Pantalla_Producto.html"><img src="assets/oficina2.png" alt="Imagen 2"></a>
                     <p>Oficina 2</p>
                     <p>Precio: 250€</p>
                 </div>
@@ -41,24 +42,24 @@
             </div>
             <div class="slide">
                 <div class="slide-content">
-                    <img src="assets/oficina4.png" alt="Imagen 4">
+                    <img src="assets/oficina4.png" alt="Imagen 1">
                     <p>Oficina 4</p>
                     <p>Precio: 5€</p>
                 </div>
                 <div class="slide-content">
-                    <img src="assets/oficina5.png" alt="Imagen 5">
+                    <img src="assets/oficina5.png" alt="Imagen 2">
                     <p>Oficina 5</p>
                     <p>Precio: 50€</p>
                 </div>
                 <div class="slide-content">
-                    <img src="assets/oficina6.png" alt="Imagen 6">
+                    <img src="assets/oficina6.png" alt="Imagen 3">
                     <p>Oficina 6</p>
                     <p>Precio: 100€</p>
                 </div>
             </div>
         </div>
-        <button class="prev" (click)="moveSlide(-1)">❮</button>
-        <button class="next" (click)="moveSlide(1)">❯</button>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
     </div>
 </main>
 
@@ -66,4 +67,29 @@
     <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
 </footer>
 
+<script>
+    let slideIndex = 1;
+
+    function moveSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "flex";
+    }
+
+    showSlides(slideIndex);
+</script>
+
 </body>
+</html>
