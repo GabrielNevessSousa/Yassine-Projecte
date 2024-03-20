@@ -1,51 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Desk</title>
-    <link rel="stylesheet" href="css/pantalla_usuario.css">
+    <title>pantalla usuari</title>
+    <link rel="stylesheet" href="css/pantalla_usuario.css" type="text/css">
 </head>
 <body>
-
-<header>
-    <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
-    <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Buscar...">
-        <button class="search-button">Buscar</button>
-    </div>
-    <div class="botones-menu">
-        <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
-        <a href="login.html"><button class="button">Logout</button></a>
-    </div>
-</header>
-
-<main>
-    <div class="container-usuario">
-        <p>MI USUARIO</p>
-        <div class="imagenes">
-            <a href=""><img class="camara" src="assets/camara.png"></a>
-            <div class="foto-perfil">
-                <img src="assets/pingu.png">
+    <header>
+        <a href="pantalla_principal.html"><img src="assets/logo-color.png" alt="Logo"></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar..." id="searchInput">
+            <button class="search-button" onclick="habilitarCampos()">Buscar</button>
+        </div>
+        <div class="botones-menu">
+            <a href="Pantalla_Reservas.html"><button class="button">Mis reservas</button></a>
+            <a href="pantalla_usuari.html"><button class="button">Usuario</button></a>
+            <a href="login.html"><button class="button">Cerrar sesión</button></a>
+        </div>
+    </header>
+   
+    <main>
+        <div class="container-usuario">
+            <p>MI USUARIO</p>
+            <div class="imagenes">
+                <a href=""><img class="camara" src="assets/camara.png"></a>
+                <div class="foto-perfil">
+                    <img src="assets/pingu.png">
+                </div>
+            </div>
+            <div class="info-usuario">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="text" class="usuario" placeholder="Nombre usuario" id="nombreUsuario" disabled>
+            </div>
+            <div class="info-usuario">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="password" class="usuario" placeholder="Contraseña" id="contrasena" disabled>
+            </div>
+            <div class="info-usuario">
+                <a><button onclick="habilitarCampos()"><img src="assets/editar.png" width="15px"></button></a>
+                <input type="text" class="usuario" placeholder="Correo electrónico" id="correo" disabled>
             </div>
         </div>
-        <div class="info-usuario">
-            <a><button>EDITAR</button></a>
-            <input type="text" class="usuario" placeholder="Nombre usuario">
-        </div>
-        <div class="info-usuario">
-            <a><button>EDITAR</button></a>
-            <input type="password" class="usuario" placeholder="Contraseña">
-        </div>
-        <div class="info-usuario">
-            <a><button>EDITAR</button></a>
-            <input type="text" class="usuario" placeholder="Correo">
-        </div>
-    </div>
-</main>
+    </main>
 
-<footer>
-    <p>Telf.Contacto: 645 746 890 | Correo de ayuda: unitydesk@gmail.com</p>
-</footer>
+    <script>
+        function habilitarCampos() {
+            const nombreUsuario = document.getElementById('nombreUsuario');
+            const contrasena = document.getElementById('contrasena');
+            const correo = document.getElementById('correo');
+
+            if (nombreUsuario.disabled) {
+                nombreUsuario.disabled = false;
+                contrasena.disabled = false;
+                correo.disabled = false;
+            } else {
+                // Aquí puedes guardar los datos en algún lugar si lo deseas
+                alert("Datos guardados correctamente.");
+                nombreUsuario.disabled = true;
+                contrasena.disabled = true;
+                correo.disabled = true;
+            }
+        }
+    </script>
 </body>
 </html>
